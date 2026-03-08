@@ -1,116 +1,88 @@
-<aside class="lab-sidebar">
+<div class="lab-sidebar">
 
-    <div class="lab-sidebar-title">
-        Automation Lab
+    <div class="lab-category">
+        <div class="lab-category-title">Inicio</div>
+
+        <div class="lab-category-items" style="display:block;">
+            <a class="lab-link active" data-page="pages/home.html">Automation Lab</a>
+        </div>
     </div>
 
-    <nav class="lab-nav">
+    <!-- FORMULARIOS -->
+    <div class="lab-category">
+        <div class="lab-category-title">Formularios</div>
 
-        <button class="lab-link active" onclick="loadContent('home')">
-            <i class="fa-solid fa-house"></i>
-            Inicio
-        </button>
+        <div class="lab-category-items">
+            <a class="lab-link" data-page="pages/login.html">Login</a>
+            <a class="lab-link" data-page="pages/register.html">Registro</a>
+            <a class="lab-link" data-page="pages/register-xpath.html">Registro sin id</a>
+        </div>
+    </div>
 
-        <button class="lab-link" onclick="loadContent('login')">
-            <i class="fa-solid fa-right-to-bracket"></i>
-            Login Lab
-        </button>
 
-        <button class="lab-link" onclick="loadContent('forms')">
-            <i class="fa-solid fa-keyboard"></i>
-            Forms Lab
-        </button>
+    <!-- ELEMENTOS UI -->
+    <div class="lab-category">
+        <div class="lab-category-title">Elementos UI</div>
 
-        <button class="lab-link" onclick="loadContent('tables')">
-            <i class="fa-solid fa-table"></i>
-            Tables Lab
-        </button>
+        <div class="lab-category-items">
+            <a class="lab-link" data-page="pages/input-text.html">Input Text</a>
+            <a class="lab-link" data-page="pages/buttons.html">Botones</a>
+            <a class="lab-link" data-page="pages/links.html">Links</a>
+            <a class="lab-link" data-page="pages/radios.html">Radios</a>
+            <a class="lab-link" data-page="pages/checkboxes.html">Checkboxes</a>
+            <a class="lab-link" data-page="pages/dropdowns.html">Dropdowns</a>
+            <a class="lab-link" data-page="pages/menus.html">Menús</a>
+        </div>
+    </div>
 
-        <button class="lab-link" onclick="loadContent('tables')">
-            <i class="fa-solid fa-table"></i>
-            Tables Lab
-        </button>
 
-        <button class="lab-link" onclick="loadContent('tables')">
-            <i class="fa-solid fa-table"></i>
-            Tables Lab
-        </button>
+    <!-- ELEMENTOS AVANZADOS -->
+    <div class="lab-category">
+        <div class="lab-category-title">Elementos Avanzados</div>
 
-        <button class="lab-link" onclick="loadContent('tables')">
-            <i class="fa-solid fa-table"></i>
-            Tables Lab
-        </button>
+        <div class="lab-category-items">
+            <a class="lab-link" data-page="pages/datepicker.html">Datepicker</a>
+            <a class="lab-link" data-page="pages/slider.html">Slider</a>
+            <a class="lab-link" data-page="pages/spinner.html">Spinner</a>
+            <a class="lab-link" data-page="pages/dragdrop.html">Drag & Drop</a>
+        </div>
+    </div>
 
-        <button class="lab-link" onclick="loadContent('tables')">
-            <i class="fa-solid fa-table"></i>
-            Tables Lab
-        </button>
 
-        <button class="lab-link" onclick="loadContent('tables')">
-            <i class="fa-solid fa-table"></i>
-            Tables Lab
-        </button>
+    <!-- VENTANAS -->
+    <div class="lab-category">
+        <div class="lab-category-title">Ventanas y Contenedores</div>
 
-        <button class="lab-link" onclick="loadContent('tables')">
-            <i class="fa-solid fa-table"></i>
-            Tables Lab
-        </button>
+        <div class="lab-category-items">
+            <a class="lab-link" data-page="pages/alerts.html">Alerts</a>
+            <a class="lab-link" data-page="pages/frames.html">Frames</a>
+            <a class="lab-link" data-page="pages/shadowdom.html">Shadow DOM</a>
+            <a class="lab-link" data-page="pages/modals.html">Modals</a>
+            <a class="lab-link" data-page="pages/new-tab.html">Nueva Pestaña</a>
+        </div>
+    </div>
 
-        <button class="lab-link" onclick="loadContent('tables')">
-            <i class="fa-solid fa-table"></i>
-            Tables Lab
-        </button>
 
-        <button class="lab-link" onclick="loadContent('tables')">
-            <i class="fa-solid fa-table"></i>
-            Tables Lab
-        </button>
+    <!-- SINCRONIZACIÓN -->
+    <div class="lab-category">
+        <div class="lab-category-title">Sincronización</div>
 
-        <button class="lab-link" onclick="loadContent('tables')">
-            <i class="fa-solid fa-table"></i>
-            Tables Lab
-        </button>
+        <div class="lab-category-items">
+            <a class="lab-link" data-page="pages/waits.html">Waits</a>
+            <a class="lab-link" data-page="pages/dynamic.html">Elementos dinámicos</a>
+            <a class="lab-link" data-page="pages/loader.html">Loader</a>
+        </div>
+    </div>
 
-        <button class="lab-link" onclick="loadContent('tables')">
-            <i class="fa-solid fa-table"></i>
-            Tables Lab
-        </button>
 
-        <button class="lab-link" onclick="loadContent('tables')">
-            <i class="fa-solid fa-table"></i>
-            Tables Lab
-        </button>
+    <!-- RETOS -->
+    <div class="lab-category">
+        <div class="lab-category-title">Retos</div>
 
-        <button class="lab-link" onclick="loadContent('tables')">
-            <i class="fa-solid fa-table"></i>
-            Tables Lab
-        </button>
+        <div class="lab-category-items">
+            <a class="lab-link" data-page="pages/pets-table.html">Tabla de Mascotas</a>
+            <a class="lab-link" data-page="pages/cart.html">Carrito</a>
+        </div>
+    </div>
 
-        <button class="lab-link" onclick="loadContent('tables')">
-            <i class="fa-solid fa-table"></i>
-            Tables Lab
-        </button>
-
-        <button class="lab-link" onclick="loadContent('tables')">
-            <i class="fa-solid fa-table"></i>
-            Tables Lab
-        </button>
-
-        <button class="lab-link" onclick="loadContent('home')">
-            <i class="fa-solid fa-table"></i>
-            TESTS
-        </button>
-
-        <button class="lab-link" onclick="loadContent('home')">
-            <i class="fa-solid fa-table"></i>
-            TESTS
-        </button>
-
-        <button class="lab-link" onclick="loadContent('home')">
-            <i class="fa-solid fa-table"></i>
-            TESTS
-        </button>
-
-    </nav>
-
-</aside>
+</div>

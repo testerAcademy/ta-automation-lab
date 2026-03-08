@@ -77,23 +77,48 @@ async function loadSidebar() {
     const response = await fetch("resources/html/sidebar.html");
     const html = await response.text();
     document.getElementById("sidebar").innerHTML = html;
+
+    bindSidebarEvents();
 }
 
-async function loadContent(fileName){
+function bindSidebarEvents() {
+    // Expandir / colapsar categorías
+    document.querySelectorAll(".lab-category-title").forEach(title => {
+        title.addEventListener("click", function () {
+            const category = this.parentElement;
+            category.classList.toggle("open");
+        });
+    });
 
+    // Click en páginas
+    document.querySelectorAll(".lab-link").forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const page = this.dataset.page;
+            if (!page) return;
+
+            const fileName = page
+                .replace("pages/", "")
+                .replace(".html", "");
+
+            loadContent(fileName);
+        });
+    });
+}
+
+async function loadContent(fileName) {
     const response = await fetch(`resources/html/${fileName}.html`);
     const html = await response.text();
 
     document.getElementById("content").innerHTML = html;
 
-    document.querySelectorAll(".lab-link")
-        .forEach(link => link.classList.remove("active"));
+    document.querySelectorAll(".lab-link").forEach(link => {
+        link.classList.remove("active");
+    });
 
-    const activeLink =
-        document.querySelector(`[onclick="loadContent('${fileName}')"]`);
-
-    if(activeLink){
+    const activeLink = document.querySelector(`.lab-link[data-page="pages/${fileName}.html"]`);
+    if (activeLink) {
         activeLink.classList.add("active");
     }
-
 }
