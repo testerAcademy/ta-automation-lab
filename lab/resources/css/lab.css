@@ -1,0 +1,251 @@
+/* ===============================
+   LAYOUT GENERAL
+================================ */
+
+body{
+    margin:0;
+}
+
+/* área entre header y footer */
+
+.lab-shell{
+    display:grid;
+    grid-template-columns:260px 1fr;
+
+    flex:1;
+}
+
+
+/* ===============================
+   SIDEBAR
+================================ */
+
+.lab-sidebar{
+
+    background:#020617;
+
+    border-right:1px solid #1e293b;
+
+    padding:20px;
+
+    height:100%;
+
+    overflow-y:auto;
+
+}
+
+
+/* TITULO */
+
+.lab-sidebar-title{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+    color:#ffffff;
+
+}
+
+
+/* ===============================
+   MENU
+================================ */
+
+.lab-nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+}
+
+
+/* ITEM MENU */
+
+.lab-link{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 14px;
+
+    border-radius:8px;
+
+    border:none;
+
+    background:transparent;
+
+    color:#94a3b8;
+
+    font-size:15px;
+
+    text-align:left;
+
+    cursor:pointer;
+
+    transition:all .2s ease;
+
+}
+
+
+/* HOVER */
+
+.lab-link:hover{
+
+    background:#1e293b;
+
+    color:#38bdf8;
+
+}
+
+
+/* ACTIVO */
+
+.lab-link.active{
+
+    background:#1e293b;
+
+    color:#38bdf8;
+
+    border-left:3px solid #38bdf8;
+
+    font-weight:600;
+
+}
+
+
+/* ICONOS */
+
+.lab-link i{
+
+    width:18px;
+
+    text-align:center;
+
+}
+
+
+/* ===============================
+   CONTENT
+================================ */
+
+.lab-content{
+
+    padding:40px;
+
+    height:100%;
+
+    overflow-y:auto;
+
+}
+
+
+/* TITULO */
+
+.lab-content h1{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+    color:#ffffff;
+
+}
+
+
+/* TEXTO */
+
+.lab-content p{
+
+    font-size:18px;
+
+    line-height:1.6;
+
+    color:#cbd5f5;
+
+}
+
+
+/* LISTAS */
+
+.lab-content ul{
+
+    margin-top:10px;
+
+    margin-bottom:20px;
+
+    padding-left:18px;
+
+}
+
+.lab-content li{
+
+    margin-bottom:6px;
+
+}
+
+
+/* ===============================
+   SCROLL STYLE SIDEBAR
+================================ */
+
+.lab-sidebar::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.lab-sidebar::-webkit-scrollbar-track{
+
+    background:#020617;
+
+}
+
+.lab-sidebar::-webkit-scrollbar-thumb{
+
+    background:#334155;
+
+    border-radius:4px;
+
+}
+
+.lab-sidebar::-webkit-scrollbar-thumb:hover{
+
+    background:#475569;
+
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width:900px){
+
+    .lab-shell{
+
+        grid-template-columns:1fr;
+
+        height:auto;
+
+    }
+
+    .lab-sidebar{
+
+        border-right:none;
+
+        border-bottom:1px solid #1e293b;
+
+        overflow:visible;
+
+    }
+
+}
