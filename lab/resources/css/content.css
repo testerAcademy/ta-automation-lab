@@ -67,6 +67,29 @@ border-color:#38bdf8;
 
 }
 
+.form-group textarea{
+
+padding:10px 12px;
+
+border-radius:6px;
+
+border:1px solid #334155;
+
+background:#020617;
+
+color:white;
+
+font-size:15px;
+
+}
+
+.form-group textarea:focus{
+
+outline:none;
+
+border-color:#38bdf8;
+
+}
 
 /* ===============================
    BOTONES
@@ -195,4 +218,57 @@ display:block;
 
 .lab-category.open .category-icon{
     transform: rotate(90deg);
+}
+
+/* ===============================
+   SELECT / DROPDOWN
+================================ */
+
+.form-group select{
+
+padding:10px 12px;
+
+border-radius:6px;
+
+border:1px solid #334155;
+
+background:#020617;
+
+color:white;
+
+font-size:15px;
+
+width:100%;
+
+}
+
+.form-group select:focus{
+
+outline:none;
+
+border-color:#38bdf8;
+
+}
+
+/* Opciones del dropdown */
+
+.form-group select option{
+
+background:#020617;
+
+color:white;
+
+}
+
+.form-group select{
+
+appearance:none;
+-webkit-appearance:none;
+-moz-appearance:none;
+
+background-image:url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+
+background-repeat:no-repeat;
+background-position:right 10px center;
+
 }
