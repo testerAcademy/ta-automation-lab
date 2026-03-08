@@ -261,3 +261,77 @@ document.addEventListener("change", function(e){
     }
 
 });
+
+
+/* ===============================
+   DYNAMIC ID GENERATOR
+============================== */
+
+function generateRandomId(prefix){
+  const random = Math.random().toString(36).substring(2,8);
+  return prefix + "-" + random;
+}
+
+function applyDynamicIds(root){
+
+  const container = root.querySelector("[data-dynamic-id]");
+  if(!container) return;
+
+  const inputs = container.querySelectorAll("input");
+  const selects = container.querySelectorAll("select");
+  const textareas = container.querySelectorAll("textarea");
+  const buttons = container.querySelectorAll("button");
+
+  if(inputs[0]) inputs[0].id = generateRandomId("firstName");
+  if(inputs[1]) inputs[1].id = generateRandomId("lastName");
+  if(inputs[2]) inputs[2].id = generateRandomId("email");
+  if(inputs[3]) inputs[3].id = generateRandomId("password");
+  if(inputs[4]) inputs[4].id = generateRandomId("confirmPassword");
+
+  if(selects[0]) selects[0].id = generateRandomId("country");
+
+  if(textareas[0]) textareas[0].id = generateRandomId("comments");
+
+  if(buttons[0]) buttons[0].id = generateRandomId("registerBtn");
+}
+
+/* ===============================
+   OBSERVER DEL CONTENT PANEL
+============================== */
+
+(function observeContentPanel(){
+
+  const panel = document.getElementById("content");
+  if(!panel) return;
+
+  const observer = new MutationObserver((mutations) => {
+
+    mutations.forEach(m => {
+
+      m.addedNodes.forEach(node => {
+
+        if(node.nodeType !== 1) return;
+
+        // Si el nodo agregado ES el contenedor dinámico
+        if(node.matches && node.matches("[data-dynamic-id]")){
+          applyDynamicIds(node.parentElement || document);
+          return;
+        }
+
+        // Si el contenedor dinámico está dentro del nodo agregado
+        if(node.querySelector){
+          const dyn = node.querySelector("[data-dynamic-id]");
+          if(dyn){
+            applyDynamicIds(node);
+          }
+        }
+
+      });
+
+    });
+
+  });
+
+  observer.observe(panel, { childList: true, subtree: true });
+
+})();
