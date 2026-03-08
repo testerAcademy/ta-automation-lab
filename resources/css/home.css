@@ -1,0 +1,45 @@
+.home-hero {
+  padding: 90px 20px 40px;
+  text-align: center;
+}
+
+.home-hero .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.home-hero h2 {
+  margin: 0 0 18px;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.home-hero p {
+  margin: 0 auto 36px;
+  max-width: 760px;
+  font-size: 1.35rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.home-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.home-btn {
+  min-width: 260px;
+  padding: 16px 24px;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: background 0.2s ease;
+}
+
+.home-btn:hover {
+  background: #1d4ed8;
+}
