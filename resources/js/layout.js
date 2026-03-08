@@ -42,7 +42,7 @@ navHome.href = base + "index.html";
 
 const navLab = document.getElementById("navLab");
 if(navLab){
-navLab.href = base + "automation-lab.html";
+navLab.href = base + "lab/index.html";
 }
 
 const navStore = document.getElementById("navStore");
