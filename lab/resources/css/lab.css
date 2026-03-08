@@ -93,15 +93,17 @@ padding:20px 12px;
 
 }
 
+.lab-link i{
+    width:20px;
+    margin-right:8px;
+    opacity:0.7;
+}
 
 /* HOVER */
 
 .lab-link:hover{
-
     background:#1e293b;
-
     color:#38bdf8;
-
 }
 
 
@@ -276,6 +278,7 @@ padding:20px 12px;
 
 .lab-link {
   display: block;
+  font-size: 15px;
   padding: 8px 10px;
   border-radius: 6px;
   cursor: pointer;
@@ -319,13 +322,16 @@ color:#94a3b8;
 
 }
 
-
 /* ===============================
    ICONO CUANDO ESTA ABIERTO
 ================================ */
 
+.lab-category-title i:first-child{
+    width:20px;
+    margin-right:10px;
+    opacity:0.85;
+}
+
 .lab-category.open .category-icon{
-
-transform:rotate(90deg);
-
+    transform: rotate(90deg);
 }

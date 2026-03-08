@@ -163,3 +163,36 @@ border-top:1px solid #1e3a5f;
 display:block;
 
 }
+
+.lab-category-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lab-category-title span{
+    flex: 1;
+    margin-left: 12px;
+    text-align: left;
+}
+
+.lab-category-title i:first-child{
+    width: 20px;
+}
+
+.category-icon{
+    margin-left: auto;
+}
+
+/* ===============================
+   ROTACIÓN ICONO MENÚ
+================================ */
+
+.category-icon{
+    margin-left: auto;
+    transition: transform .2s ease;
+}
+
+.lab-category.open .category-icon{
+    transform: rotate(90deg);
+}
