@@ -1,0 +1,140 @@
+<div class="lab-page">
+
+    <h1>Login</h1>
+
+    <p>
+        Ejercicio básico de login para practicar automatización.
+    </p>
+
+
+    <div class="accordion" id="testData">
+
+        <div class="accordion-title">
+            Test Data
+        </div>
+
+        <div class="accordion-content">
+
+            <p><b>Usuario válido:</b> tester</p>
+            <p><b>Password válida:</b> academy</p>
+
+            <ul>
+                <li>Campos vacíos</li>
+                <li>Usuario incorrecto</li>
+                <li>Password incorrecta</li>
+                <li>Login correcto</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="content-card">
+
+        <form id="loginForm">
+
+            <div class="form-group">
+
+                <label>Usuario</label>
+
+                <input
+                        type="text"
+                        id="username"
+                        placeholder="Ingresa tu usuario"
+                />
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Contraseña</label>
+
+                <input
+                        type="password"
+                        id="password"
+                        placeholder="Ingresa tu contraseña"
+                />
+
+            </div>
+
+
+            <button
+                    type="button"
+                    id="loginBtn"
+                    class="btn-primary"
+            >
+                Iniciar sesión
+            </button>
+
+
+        </form>
+
+
+        <div id="loginMessage" class="message"></div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+
+    /* ===============================
+       ACORDEON
+    ================================ */
+
+    document.querySelector("#testData .accordion-title")
+    .addEventListener("click", function(){
+
+    document.getElementById("testData").classList.toggle("open");
+
+    });
+
+
+    /* ===============================
+       LOGIN
+    ================================ */
+
+    document.getElementById("loginBtn").addEventListener("click", function(){
+
+    const user = document.getElementById("username").value.trim();
+    const pass = document.getElementById("password").value.trim();
+
+    const message = document.getElementById("loginMessage");
+
+
+    if(user === ""){
+
+    message.className = "message error";
+    message.innerText = "El usuario es requerido";
+    return;
+
+    }
+
+    if(pass === ""){
+
+    message.className = "message error";
+    message.innerText = "La contraseña es requerida";
+    return;
+
+    }
+
+    if(user !== "tester" || pass !== "academy"){
+
+    message.className = "message error";
+    message.innerText = "Usuario o contraseña inválidos";
+    return;
+
+    }
+
+    message.className = "message success";
+    message.innerText = "Login exitoso";
+
+    });
+
+
+</script>
